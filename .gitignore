@@ -24,3 +24,8 @@ dist-ssr
 *.sw?
 *.pdf
 beatrizcv2026.pdf
+
+# Local env files
+.env
+.env.local
+.env.*.local
