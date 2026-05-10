@@ -87,26 +87,7 @@ const roles = [
   'Creativa y Detallista ✨'
 ];
 
-function scrambleText(element: HTMLElement, finalText: string, duration = 600) {
-  const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789✦◇✿⟡';
-  let iteration = 0;
-  const totalIterations = Math.ceil(duration / 30);
-  const interval = setInterval(() => {
-    element.textContent = finalText
-      .split('')
-      .map((char, i) => {
-        if (char === ' ') return ' ';
-        if (i < Math.floor((iteration / totalIterations) * finalText.length)) return char;
-        return chars[Math.floor(Math.random() * chars.length)];
-      })
-      .join('');
-    iteration++;
-    if (iteration >= totalIterations) {
-      clearInterval(interval);
-      element.textContent = finalText;
-    }
-  }, 30);
-}
+
 
 onMounted(() => {
   // Hero entrance
