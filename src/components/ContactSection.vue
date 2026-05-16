@@ -7,8 +7,8 @@
     <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center relative z-10">
       
       <!-- Left side: Hook & Links -->
-      <div class="flex flex-col text-left">
-        <div class="section-pill text-brand-mint contact-reveal inline-block mb-6 self-start shadow-lg shadow-brand-mint/10">✿ Hablemos</div>
+      <div class="flex flex-col text-center lg:text-left items-center lg:items-start">
+        <div class="section-pill text-brand-mint contact-reveal inline-block mb-6 self-center lg:self-start shadow-lg shadow-brand-mint/10">✿ Hablemos</div>
         <h2 class="text-4xl sm:text-6xl font-extrabold mb-6 contact-reveal leading-tight" style="transition-delay: 0.1s">
           Creemos algo <br/><span class="text-gradient-main">espectacular</span> ✨
         </h2>

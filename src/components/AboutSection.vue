@@ -2,7 +2,7 @@
   <section id="about" class="py-32 px-6 sm:px-12 max-w-6xl mx-auto">
     <div class="flex flex-col items-center mb-16">
       <div class="section-pill text-brand-pink about-reveal">✦ Sobre Mí</div>
-      <h2 class="text-4xl sm:text-5xl font-extrabold mt-3 about-reveal" style="transition-delay: 0.1s">
+      <h2 class="text-4xl sm:text-5xl font-extrabold mt-3 about-reveal text-center" style="transition-delay: 0.1s">
         Una desarrolladora con <span class="text-gradient-main">alma creativa</span>
       </h2>
     </div>

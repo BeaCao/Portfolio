@@ -24,7 +24,7 @@
         :class="scrolled ? 'bg-[#0A0C1C]/85 backdrop-blur-xl shadow-brand-pink/10' : 'bg-[#0A0C1C]/40 backdrop-blur-md'">
         
         <!-- Logo -->
-        <a href="#hero" class="text-lg sm:text-3xl font-black hover:scale-110 transition-transform duration-300 shrink-0"
+        <a href="#hero" class="hidden md:block text-lg sm:text-3xl font-black hover:scale-110 transition-transform duration-300 shrink-0"
           style="font-family: 'Dancing Script', cursive; background: linear-gradient(135deg, #b8d4f0, #d4b3e8, #f5c6d8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">
           Bea ✦
         </a>
@@ -58,8 +58,8 @@
         </div>
 
         <!-- CTA Button -->
-        <a href="#contact" class="btn-primary !py-1.5 sm:!py-2.5 !px-3 sm:!px-7 text-[0.65rem] sm:text-sm font-bold magnetic-btn shrink-0 shadow-lg shadow-brand-pink/20">
-          Contacto 💌
+        <a href="#contact" class="btn-primary !py-1 sm:!py-2.5 !px-2 sm:!px-7 text-[0.6rem] sm:text-sm font-bold magnetic-btn shrink-0 shadow-lg shadow-brand-pink/20">
+          Contacto <span class="hidden sm:inline">💌</span>
         </a>
       </nav>
     </header>
