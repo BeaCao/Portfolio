@@ -348,12 +348,22 @@ onMounted(() => {
   window.addEventListener('click', handleMouseClick);
   window.addEventListener('resize', handleResize);
 
-  // Smooth scroll
+  // Smooth scroll — pausa ScrollTrigger durante la animación para evitar conflictos
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (this: HTMLAnchorElement, e: Event) {
       e.preventDefault();
       const t = this.getAttribute('href');
-      if (t) gsap.to(window, { duration: 1.2, scrollTo: { y: t, offsetY: 80 }, ease: 'power3.inOut' });
+      if (!t) return;
+      ScrollTrigger.getAll().forEach(st => st.disable());
+      gsap.to(window, {
+        duration: 0.85,
+        scrollTo: { y: t, offsetY: 80 },
+        ease: 'power2.inOut',
+        onComplete: () => {
+          ScrollTrigger.getAll().forEach(st => st.enable());
+          ScrollTrigger.refresh();
+        }
+      });
     });
   });
 
