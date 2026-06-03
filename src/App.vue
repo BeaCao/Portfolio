@@ -348,22 +348,16 @@ onMounted(() => {
   window.addEventListener('click', handleMouseClick);
   window.addEventListener('resize', handleResize);
 
-  // Smooth scroll — pausa ScrollTrigger durante la animación para evitar conflictos
+  // Smooth scroll nativo — no interfiere con ScrollTrigger
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (this: HTMLAnchorElement, e: Event) {
       e.preventDefault();
-      const t = this.getAttribute('href');
-      if (!t) return;
-      ScrollTrigger.getAll().forEach(st => st.disable());
-      gsap.to(window, {
-        duration: 0.85,
-        scrollTo: { y: t, offsetY: 80 },
-        ease: 'power2.inOut',
-        onComplete: () => {
-          ScrollTrigger.getAll().forEach(st => st.enable());
-          ScrollTrigger.refresh();
-        }
-      });
+      const id = this.getAttribute('href');
+      if (!id) return;
+      const target = document.querySelector(id);
+      if (!target) return;
+      const top = (target as HTMLElement).getBoundingClientRect().top + window.scrollY - 80;
+      window.scrollTo({ top, behavior: 'smooth' });
     });
   });
 
