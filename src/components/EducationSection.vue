@@ -90,7 +90,7 @@ const education = [
     shortTitle: 'DAM',
     subtitle: 'Desarrollo de Apps Multiplataforma',
     school: 'IES El Rincón',
-    date: 'En Curso',
+    date: '2024 – 2026',
     icon: '💻',
     desc: 'Formación de alto nivel especializada en el ciclo de vida del software, incluyendo desarrollo web, móvil y arquitecturas de escritorio utilizando tecnologías e industrias como Java, Kotlin, Vue y bases de datos relacionales.',
     colorGrad: 'from-brand-blue to-brand-mint',

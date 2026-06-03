@@ -17,7 +17,7 @@
     <!-- 2x2 Bento Grid -->
     <div class="relative w-full">
       <!-- Use negative margins to let the scroll bleed to the edge of the screen -->
-      <div class="flex md:grid overflow-x-auto md:overflow-visible snap-x snap-mandatory md:snap-none pb-4 md:pb-0 grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 relative z-10 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none] -mx-6 px-6 sm:-mx-12 sm:px-12 md:mx-0 md:px-0">
+      <div class="flex md:grid overflow-x-auto md:overflow-visible snap-x snap-mandatory md:snap-none pb-4 md:pb-0 grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 relative z-10 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none] -mx-6 px-6 sm:-mx-12 sm:px-12 md:mx-0 md:px-0 touch-pan-x overscroll-x-contain">
         
         <!-- Frontend -->
         <div class="min-w-[85vw] sm:min-w-[70vw] md:min-w-0 snap-center glass-card p-6 sm:p-8 rounded-[2rem] skills-reveal border border-white/5 hover:border-brand-pink/40 hover:shadow-[0_10px_40px_-10px_rgba(245,198,216,0.25)] transition-all duration-500 overflow-hidden relative group" style="transition-delay: 0.2s">
